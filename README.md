@@ -2,12 +2,7 @@
 Self-Driving Car Engineer Nanodegree Program
 ---
 
-Final result:
-<<<<<<< HEAD
 ![Final Result](https://media.giphy.com/media/14sBLftdH7T2EM/giphy.gif)
-=======
-![Final Result](http://i.imgur.com//LmlM2sS.gif)
->>>>>>> origin/master
 
 ## Reflection:
 * Describe the effect each of the P, I, D components had in your implementation.
