@@ -1,7 +1,25 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
-
 ---
+
+Final result:
+![Imgur](http://i.imgur.com/tFs6JVT.gif)
+
+## Reflection:
+* Describe the effect each of the P, I, D components had in your implementation.
+  * **P:** It has the most direct effect on the cars behaviour. Higher the value, higher is the effort made by the car to stay at center of the track. This resulted in car steering hard left or right, depending on how far it is from center.
+  * **I:** As this is used to counteract any bias in CTE, it can have an effect on the steering angle. In this project it hepled the car in cornering better.
+  * **D:** It helped balance the effect produced by the value of P and keept the car stable by helping the car steer to the center of track smoothly.
+* Describe how the final hyperparameters were chosen.
+  * Final values for P,I and D were choosen manually. I tried by first setting only the P parameter and observed how it affected the car. I tried with 0.01, 0.1, 0.2, 0.4, 0.8 and 1. Out of these values I found the values 0.1 and 0.2 were giving much better result than the rest.
+  * After having some idea about the value for P, I started tuning for D. Here I observed that lower values were having less effects, so, I kept increasing the value by 50 or 100 and observed how smoother car steered to the center. With this I came to a conclusion that its value should be between 1000-2000.
+  * Experimenting with these values for P and D were still not enough to keep the car to the track. So, keeping the value of P and D fixed I started reducing the throttle so that the car can have more time to react and center itself. This reduction had immediate effect of the car's parformance on track.
+  * At this point, I had almost set on the values for **P - 0.1, D - 2000 and throttle - 15**. I only have to reduce the bias now so that car make good turns. I stared to tune **I** with 0.1 and slowly reached the final value of 0.000001.
+  * final values
+    * **P** : 0.15
+    * **I** : 0.000001
+    * **D** : 2000.0
+    * **throttle** : 0.15
 
 ## Dependencies
 
